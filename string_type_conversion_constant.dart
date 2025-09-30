@@ -64,5 +64,8 @@ print(aConstNum.runtimeType);
 print(aConstBool.runtimeType);
 print(aConstString.runtimeType);
 
+int? num;         // if you define a variable or object and don't assign value, it means it's empty, it 
+print(num);      // contains null.
+
 
 }
