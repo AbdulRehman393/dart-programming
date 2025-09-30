@@ -32,8 +32,15 @@ main()
 
  print('My name is $name1 $name2 \n');
 
- bool isItTrue1 = true;
- var isItTrue2  = false;
- 
+ bool isItTrue1 = true; 
+ var isItTrue2 = false;
+
+ print('isItTrue1: $isItTrue1 | isItTrue2: $isItTrue2 \n');
+
+ dynamic weakVariable = 10;
+ print('WeakVariable 1: $weakVariable \n');
+
+ weakVariable = 'Dart Programming';
+ print('WeakVariable 2: $weakVariable');
 
 }
