@@ -33,6 +33,30 @@ void main()
   //If We want to define each of thes values as constantts  
   List<String> item = const['bread','soap'];
   print(item);
- 
+  
+  //If we want to copy a list to another list. we can do that but here they are not copied
+  // both Name and Name2 are pointing the samelist of items
+  
+  List <String> Name = ['Jack', 'Jill'];
+  var Name2 = Name;
+  Name[1] = 'Mark';
+
+  for (var n in Name2)
+  {
+    print(n);
+  } 
+
+  //If you want to clown(copy) the List, you can do this using spread operator
+  List<String> boys = ['Ali','Ahmad'];;
+  var students = [...boys];
+  boys[1] = 'Salman';
+
+  for (var n in students)
+  {
+    print(n);
+  }
+
+
+
 
 }
