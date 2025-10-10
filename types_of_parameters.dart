@@ -8,7 +8,8 @@ void main()
   print(sum(2,2));
   print(product(value2: 3, value1: 2));
   print(sub(4,num2: 1));
-  print(remainder(5));
+  print(add(5));
+  print(difference(10));
 
 }
 dynamic sum (var num1, var num2) => num1 + num2;
@@ -22,7 +23,9 @@ dynamic sub(var num1, {var num2}) => num1 - num2;
 
 //When we define paramater as named parameter , by deafult it is optioanl
 //still we are using the value of num2 , We have to use null aware operator
-dynamic remainder(var num1, {var num2}) => num1 % (num2??2); 
+dynamic add(var num1, {var num2}) => num1 + (num2??0); 
 
+//if we dont want to use null aware  , we can use a shortcut default value parameter.
+dynamic difference(var num1, {var num2=0}) => num1 - num2;
 
  
