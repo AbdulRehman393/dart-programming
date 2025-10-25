@@ -1,27 +1,43 @@
-//Class is a bluprint 
-// Defining a class
-class Car {
-  // Properties (fields)
-  String brand;
-  String color;
-  int year;
+//Class and Object
 
-  // Constructor
-  Car(this.brand, this.color, this.year);
+//A class is like a blueprint or template for creating an object 
+//It has two things 1) variables which is called fields or properties
+//                  2)  functionns called methods
 
-  // Method
-  void displayInfo() {
-    print("Brand: $brand, Color: $color, Year: $year");
+//An object is a real-world instance of a class, somthing actually created from blueprint
+//Each object has 1) Its own copy of data     2) Access to the same method define in the class.
+
+//Class
+class Person{
+  String? name;
+  int? age;
+
+  //Default Constructor
+  Person(this.name,[this.age = 10]);
+  
+  //Named Constructor
+  Person.guest()
+  {
+    name = 'Guest';
+    age = 25;
+  }
+
+  void showOutput()
+  {
+    print(name);
+    print(age);
   }
 }
 
-// Main function (program starts here)
-void main() {
-  // Creating objects of the class
-  var car1 = Car("Toyota", "Red", 2022);
-  var car2 = Car("Honda", "Black", 2023);
+void main()
+{
+  Person person1 = Person('Mahmud');
+  person1.showOutput();
 
-  // Calling method using objects
-  car1.displayInfo();
-  car2.displayInfo();
+  var person2 = Person("Jawad",18);      //Type Inferred
+  person2.showOutput();
+
+  var person3  = Person.guest();
+  person3.showOutput();
+
 }
