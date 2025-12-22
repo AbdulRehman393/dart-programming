@@ -12,9 +12,20 @@ class Person{
   String? name;
   int? age;
 
-  //Default Constructor
-  Person(this.name,[this.age = 10]);
-  
+   //Default Constructor
+   //A Constructor with no paramters, if you dont write any thing dart will automatically
+   //provide it
+   //class Person
+   //{
+   // Person()
+   //{
+   //  print('Constructor Called');
+   //   }
+   // }
+ 
+    //Parameteried Constructor
+    Person(this.name,[this.age = 10]);
+    
   //Named Constructor
   Person.guest()
   {
@@ -39,5 +50,5 @@ void main()
 
   var person3  = Person.guest();
   person3.showOutput();
-
+  
 }
